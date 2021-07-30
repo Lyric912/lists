@@ -1,29 +1,30 @@
-name:
-date:
+name: Lyric Marner
+date: July 28, 2021
 
 1 - What is a List?
-
+A list is a  mustable, ordered, sequence of items. 
 
 2 - How can you create an empty list? What about a pre-populated list?
-
+You can create an empty list with the list() function and via list displays. You can make a pre-populated list using variables made like 'variable = 1' and then printing that variable. 
 
 3 - How do you access a list?
-
+You can access a list by indexing it.   
 
 4 - How do you add items to a list? Remove items?
-
+You add items to a list with the methods .append and .insert. You can remove items with the method .remove. 
 
 5 - What happens if you got out of bounds with a list?
-
+If you go out of bounds with a list, you will get an index error.
 
 6 - Why are lists useful to us, as opposed to strings?
-
+Lists are useful because they can be changed, unlike strings, and they have individual positions instead of a specific character
 
 7 - Where a position in a string represents a character, a position in a list represents a ______?
-
+It represents an item, piece of data, or an object.
 
 8 - Which of the methods for lists return a value? Which methods for lists operate on the list (change it)?
 Documentation: https://www.w3schools.com/python/python_lists_methods.asp
-
+The .count and .index methods return a value. The .insert,.append, and .remove operate on the list. 
 
 9 - Why might you start with an empty list when writing a program?
+You might start with an empty list to test out your overall program or to write out the diffent ways to write lists so you can remember later in your code. 

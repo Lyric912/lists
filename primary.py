@@ -1,5 +1,5 @@
-# name:
-# author:
+# name: Lyric Marner
+# date: July 27,2021
 
 # -------------------- Section 1 ------------------------- #
 # ------------------ List Creation ----------------------- #
@@ -15,7 +15,13 @@ print('Creating an Empty List' '\n')
 #   2. Print the lists.
 #
 # WRITE CODE BELOW
+list1 = []
+print(list1)
 
+print()
+
+list1 = list()
+print(list1)
 
 print('\n' 'Creating a Pre-Populated List' '\n')
 # 2. Creating a Pre-Populated List
@@ -34,7 +40,20 @@ print('\n' 'Creating a Pre-Populated List' '\n')
 #
 # WRITE CODE BELOW
 integers = [1, 15, -4, -26, 34]
+floats = [9.7, 6.0, 4.5, 3.14, 11.9]
+a = float(input('a = '))
+b = float(input('b = '))
+booleans = ['a == b |', a == b, 'a != b |', a != b]
+animals = ['cow','parrot','lizard']
+objects = ['panda', 12, -9.0]
+string = list('star')
 
+print(integers)
+print(floats)
+print(booleans)
+print(animals)
+print(objects)
+print(string)
 
 # -------------------- Section 2 ------------------------- #
 # ---------------- List Modification --------------------- #
@@ -55,7 +74,17 @@ print('Accessing and Modifying a List' '\n')
 #
 # WRITE CODE BELOW
 integers[2] = 44
+floats[4] = 99
+booleans[0] = 'a !== b |'
+animals[1] = 'zebra' 
+objects[2] = 'love' 
 
+print(integers)
+print(floats)
+print(booleans)
+print(animals)
+print(objects)
+print()
 
 print('\n' 'Append, Insert, and Remove' '\n')
 # 2. Accessing and Modifying a List
@@ -73,7 +102,14 @@ print('\n' 'Append, Insert, and Remove' '\n')
 #
 # WRITE CODE BELOW
 integers.append(25)
+floats.append(7.7)
+booleans.remove(a == b)
+objects.insert(1, 'hello')
 
+print(integers)
+print(floats)
+print(booleans)
+print(objects)
 
 print('\n' 'List Concatenation' '\n')
 # 3. List Concatenation
@@ -98,8 +134,12 @@ print(
     f'example_concatenation | {example_concatenation}' '\n'
     f'example_duplication | {example_duplication}' '\n'
 )
+nums = [1, 15, -4, -26, 34] + [9.7, 6.0, 4.5, 3.14, 11.9]
 
+many_animals = ['cow','parrot','lizard'] * 3
 
+print(nums)
+print(many_animals)
 # -------------------- Section 3 ------------------------- #
 # --------------------- Looping -------------------------- #
 print('\n' '# -------------------- Section 3 ------------------------- #')
@@ -115,7 +155,12 @@ print('Looping' '\n')
 #   An example has been shown below:
 #
 # WRITE CODE BELOW
+for i in range(len(many_animals)):
+    print(many_animals[i]) 
+print()
 
+for item in nums:
+    print(item)
 
 # -------------------- Section 4 ------------------------- #
 # ------------------ Comprehension ----------------------- #
@@ -139,12 +184,21 @@ print('Dice - Statistics' '\n')
 # WRITE CODE BELOW
 from random import randint
 
-size = 5
-rolls = []
+def total(num_of_rolls):
+    for i in range(num_of_rolls):
+        dice = randint(1,6) 
+        rolls.append(dice)
+    
+    print(f'rolls | {rolls}')
+    for i in range(1,7):  # stop - start --> 7 - 1 = 6
+        print(f'{i}\t| total - {rolls.count(i)}\t\t| rate of appearance - {"{:.2%}".format(rolls.count(i) / size)}')
 
-for i in range(size):
-    pass  # finish the loop
 
-print(f'rolls | {rolls}')
-print(f'1\t| total - {rolls.count(1)}\t\t| rate of appearance - {"{:.2%}".format(rolls.count(1) / size)}')
-# finish the rest!
+for size in [5, 10, 100, 1000]:
+    rolls = []
+    total(size)
+
+
+
+
+
